@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/index.css') }}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Cat or Dog Predictor</h1>
+    <div id="content">
+      <form action="/predict" method="POST" enctype="multipart/form-data">
+        <label for="uploadedfile">Upload an image file to detect whether it is a dog or cat</label>
+        <br>
+        <br>
+        <input type="file" name="uploadedfile" id="File" required>
+        <br>
+        <br>
+        <button value="Predict" class="btn btn-primary">PREDICT</button>
+      </form>
+    </div>
+  </body>
+</html>
